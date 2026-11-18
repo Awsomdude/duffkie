@@ -22,7 +22,7 @@ jobs:
           channel: stable
 
       - run: flutter pub get
-      - run: flutter build web --base-href "/duffkie/"
+      - run: flutter build web --base-href "/"
 
       - uses: actions/upload-pages-artifact@v3
         with:
