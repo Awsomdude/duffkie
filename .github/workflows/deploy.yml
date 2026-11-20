@@ -3,7 +3,7 @@ name: Deploy Flutter To Cloudflare
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   deploy:
@@ -14,10 +14,10 @@ jobs:
 
       - uses: subosito/flutter-action@v2
         with:
-          channel: stable
+          flutter-version: "3.50.0"
 
-      - run: flutter --version
       - run: flutter pub get
+
       - run: flutter build web
 
       - name: Publish to Cloudflare Pages
